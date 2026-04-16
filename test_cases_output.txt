@@ -1,0 +1,104 @@
+### Test Case 1: Valid Login
+- **Test Case ID**: TC_LOGIN_001
+- **Test Title**: Successful login with valid email and password
+- **Preconditions**: The user has a valid email and password, and the account is not locked.
+- **Test Steps**:
+  1. Enter a valid email address in the email field.
+  2. Enter a valid password (at least 8 characters) in the password field.
+  3. Click the login button.
+- **Expected Result**: The user is redirected to the dashboard.
+- **Test Type**: Positive
+
+### Test Case 2: Invalid Email Format
+- **Test Case ID**: TC_LOGIN_002
+- **Test Title**: Login with invalid email format
+- **Preconditions**: The user enters an invalid email format.
+- **Test Steps**:
+  1. Enter an invalid email format (e.g., without '@' or missing domain) in the email field.
+  2. Enter a valid password (at least 8 characters) in the password field.
+  3. Click the login button.
+- **Expected Result**: An error message is displayed indicating that the email format is invalid.
+- **Test Type**: Negative
+
+### Test Case 3: Short Password
+- **Test Case ID**: TC_LOGIN_003
+- **Test Title**: Login with password less than 8 characters
+- **Preconditions**: The user enters a password less than 8 characters.
+- **Test Steps**:
+  1. Enter a valid email address in the email field.
+  2. Enter a password less than 8 characters in the password field.
+  3. Click the login button.
+- **Expected Result**: An error message is displayed indicating that the password must be at least 8 characters.
+- **Test Type**: Negative
+
+### Test Case 4: Incorrect Credentials
+- **Test Case ID**: TC_LOGIN_004
+- **Test Title**: Login with incorrect email or password
+- **Preconditions**: The user enters incorrect email or password.
+- **Test Steps**:
+  1. Enter an invalid email address or a valid email with an incorrect password in the respective fields.
+  2. Click the login button.
+- **Expected Result**: An error message "Invalid email or password" is displayed.
+- **Test Type**: Negative
+
+### Test Case 5: Multiple Failed Attempts
+- **Test Case ID**: TC_LOGIN_005
+- **Test Title**: Five consecutive failed login attempts
+- **Preconditions**: The user has not exceeded the 5 failed attempts limit.
+- **Test Steps**:
+  1. Attempt to log in with incorrect credentials 5 times consecutively.
+- **Expected Result**: After the fifth attempt, the account is locked for 30 minutes, and a message indicating the lockout period is displayed.
+- **Test Type**: Negative
+
+### Test Case 6: Account Lockout
+- **Test Case ID**: TC_LOGIN_006
+- **Test Title**: Login attempt while account is locked
+- **Preconditions**: The user's account is locked due to 5 consecutive failed login attempts.
+- **Test Steps**:
+  1. Attempt to log in while the account is locked.
+- **Expected Result**: A message is displayed stating that the account is locked and specifying the remaining lockout time.
+- **Test Type**: Negative
+
+### Test Case 7: Forgot Password Link Visibility
+- **Test Case ID**: TC_LOGIN_007
+- **Test Title**: Visibility of the "Forgot Password" link
+- **Preconditions**: The user is on the login page.
+- **Test Steps**:
+  1. Observe the login page.
+- **Expected Result**: The "Forgot Password" link is visible on the login page.
+- **Test Type**: Positive
+
+### Test Case 8: Forgot Password Link Functionality
+- **Test Case ID**: TC_LOGIN_008
+- **Test Title**: Functionality of the "Forgot Password" link
+- **Preconditions**: The user has access to their email and is on the login page.
+- **Test Steps**:
+  1. Click the "Forgot Password" link.
+  2. Enter the email address associated with the account.
+  3. Follow the password recovery process.
+- **Expected Result**: The user can reset their password and log in successfully afterward.
+- **Test Type**: Positive
+
+### Test Case 9: Edge Case - Email with Special Characters
+- **Test Case ID**: TC_LOGIN_009
+- **Test Title**: Login with email containing special characters
+- **Preconditions**: The user has an email address containing special characters.
+- **Test Steps**:
+  1. Enter an email address containing special characters (e.g., '.', '-', '_') in the email field.
+  2. Enter a valid password in the password field.
+  3. Click the login button.
+- **Expected Result**: The user is redirected to the dashboard if the credentials are correct.
+- **Test Type**: Edge Case
+
+### Test Case 10: Edge Case - Password with Special Characters
+- **Test Case ID**: TC_LOGIN_010
+- **Test Title**: Login with password containing special characters
+- **Preconditions**: The user has a password containing special characters.
+- **Test Steps**:
+  1. Enter a valid email address in the email field.
+  2. Enter a password containing special characters (and at least 8 characters) in the password field.
+  3. Click the login button.
+- **Expected Result**: The user is redirected to the dashboard if the credentials are correct.
+- **Test Type**: Edge Case
+
+These test cases cover various scenarios, including valid and invalid inputs, edge cases, and functionality related to login attempts and password recovery, ensuring comprehensive testing of the user login feature.

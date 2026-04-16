@@ -1,0 +1,11 @@
+Feature: User Login
+
+A user should be able to log in to the application using their email and password.
+
+Requirements:
+- Email field must accept valid email format only
+- Password must be at least 8 characters
+- If credentials are correct, user is redirected to the dashboard
+- If credentials are wrong, show error message "Invalid email or password"
+- After 5 failed attempts, lock the account for 30 minutes
+- A "Forgot Password" link should be visible on the login page
